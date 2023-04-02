@@ -39,6 +39,9 @@ namespace Parcial2_MarinRiosJohanSantiago.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Id")
+                        .IsUnique();
+
                     b.ToTable("Tickets");
                 });
 #pragma warning restore 612, 618

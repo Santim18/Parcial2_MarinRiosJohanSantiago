@@ -12,8 +12,8 @@ using Parcial2_MarinRiosJohanSantiago.DAL;
 namespace Parcial2_MarinRiosJohanSantiago.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230402115603_CreateDatabase")]
-    partial class CreateDatabase
+    [Migration("20230402121728_DataBaseConcertDb")]
+    partial class DataBaseConcertDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,6 +41,9 @@ namespace Parcial2_MarinRiosJohanSantiago.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
 
                     b.ToTable("Tickets");
                 });

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Parcial2_MarinRiosJohanSantiago.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateDatabase : Migration
+    public partial class DataBaseConcertDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,6 +24,12 @@ namespace Parcial2_MarinRiosJohanSantiago.Migrations
                 {
                     table.PrimaryKey("PK_Tickets", x => x.Id);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tickets_Id",
+                table: "Tickets",
+                column: "Id",
+                unique: true);
         }
 
         /// <inheritdoc />
